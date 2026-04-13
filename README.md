@@ -32,3 +32,6 @@ To build a low-cost, easy-to-use health assistant that can help young girls and 
    python app.py
 4. Open in Browser
    http://127.0.0.1:5000/
+
+## 🤝 Vision
+Naribandhu aims to become a trusted digital companion for women's health, making awareness and basic healthcare guidance accessible to everyone.
