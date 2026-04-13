@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Naribandhu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <h2>Welcome to Naribandhu</h2>
+    <p>Enter your last period date:</p>
+
+    <form action="/predict" method="POST"> 
+        <input type="date" name="last_period" required>
+        <br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+</body>
+</html>
