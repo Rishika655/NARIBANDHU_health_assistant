@@ -27,8 +27,8 @@ To build a low-cost, easy-to-use health assistant that can help young girls and 
 ## ▶️ How to Run
 1. Install Python
 2. Install Flask:
-3.   py -m pip install flask
-4. Run the app
-5.   python app.py
-6. Open in Browser
-7.   http://127.0.0.1:5000/
+   py -m pip install flask
+3. Run the app
+   python app.py
+4. Open in Browser
+   http://127.0.0.1:5000/
