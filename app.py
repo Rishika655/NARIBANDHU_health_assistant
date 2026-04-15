@@ -10,6 +10,11 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+## Menu
+@app.route('/menu')
+def menu():
+    return render_template('menu.html')
+
 ## Predict route
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -76,5 +81,33 @@ def pcos():
         message=message,
         tips=tips
     )
+
+
+
+## cycle tracker
+@app.route('/tracker', methods=['GET'])
+def tracker_page():
+    return render_template('tracker.html')
+
+@app.route('/tracker', methods=['POST'])
+def tracker():
+    last_period = request.form['last_period']
+    cycle_length = int(request.form['cycle'])
+
+    last_date = datetime.strptime(last_period, "%Y-%m-%d")
+
+    next_period = last_date + timedelta(days=cycle_length)
+    ovulation = next_period - timedelta(days=14)
+    fertile_start = ovulation - timedelta(days=2)
+    fertile_end = ovulation + timedelta(days=2)
+
+    return render_template(
+        'tracker_result.html',
+        next_period=next_period.date(),
+        ovulation=ovulation.date(),
+        fertile_start=fertile_start.date(),
+        fertile_end=fertile_end.date()
+    )
+
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu - Naribandhu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>🌿 Choose a Feature 🌿</h2>
+
+    <br>
+
+    <a href="/pcos">
+        <button>🌸 PCOS Risk Checker 🌸</button>
+    </a>
+
+    <br><br>
+
+    <form action="/predict" method="POST">
+        <label>📅 Predict Next Period </label><br>
+        <input type="date" name="last_period" required><br><br>
+        <button type="submit">Check</button>
+    </form>
+
+    <br><br>
+
+    <a href="/">🏠 Back to Home</a>
+
+</div>
+
+</body>
+</html>
