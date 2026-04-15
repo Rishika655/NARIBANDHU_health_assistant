@@ -1,7 +1,9 @@
 # Naribandhu – Your Health Companion
 
 ## 🌸 About the Project
-Naribandhu is a simple and accessible menstrual health assistant designed to support menstrual health awareness, especially in rural areas. It helps users track their cycle, predict future periods, and understand possible PCOS risk in an easy and user friendly way.
+Naribandhu is a simple and accessible menstrual health assistant designed to support menstrual health awareness, especially in rural areas. It helps users track their cycle, predict future periods, and understand possible PCOS risk in an easy and user-friendly way.
+
+This project was built as part of my learning in web development and aims to solve real-life health awareness problems through a simple and intuitive interface.
 
 ## 🚀 Features
 
@@ -55,7 +57,23 @@ It should not be used as a substitute for professional medical advice.
 4. Open in Browser
    http://127.0.0.1:5000/
 
+## Screenshots
 
-💡 Inspiration
+### 🌸 Home Page
+<img width="1185" height="859" alt="image" src="https://github.com/user-attachments/assets/07b9cc7e-ab84-4100-bd1a-14ef50c6917f" />
+
+### 🌿 Menu Page
+<img width="1036" height="787" alt="image" src="https://github.com/user-attachments/assets/cacae1cd-2c6b-422c-bc10-650e23a59d57" />
+
+### 📊 PCOS Result
+<img width="901" height="836" alt="image" src="https://github.com/user-attachments/assets/b288ca90-08b0-49d1-89a0-86e6b89fba3d" />
+
+### 📅 Cycle Tracker
+<img width="876" height="716" alt="image" src="https://github.com/user-attachments/assets/be7f1021-b39e-4f6f-acbc-7efe0182dd63" />
+
+## 💡Inspiration
 
 Naribandhu is inspired by the need to create simple, accessible healthcare tools for women, especially in underserved communities.
+
+## 👩‍💻 Author
+Rishika Mal
