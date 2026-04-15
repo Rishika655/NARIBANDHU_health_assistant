@@ -6,15 +6,24 @@
 </head>
 <body>
 
-    <h2>Welcome to Naribandhu</h2>
-    <p>Enter your last period date:</p>
+<div class="container">
 
-    <form action="/predict" method="POST"> 
-        <input type="date" name="last_period" required>
-        <br><br>
-        <button type="submit">Predict</button>
-    </form>
+    <h1>🌸 Naribandhu 🌸</h1>
+    <h3>Your Health Companion</h3>
+
+    <p class="tagline">
+        <i>Empowering women with simple and accessible health tools.</i>
+    </p>
+
+    <img src="{{ url_for('static', filename='images/health1.png') }}" class="home-img">
+
     <br><br>
-    <a href="/pcos">Check PCOS Risk</a>
+
+    <a href="/menu">
+        <button>🚀 Start</button>
+    </a>
+
+</div>
+
 </body>
 </html>
