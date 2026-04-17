@@ -198,3 +198,125 @@ body {
     top: 0;
     left: 0;
 }
+
+.chat-box {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+/* User bubble */
+.user-msg {
+    background: #f8bbd0;
+    padding: 12px;
+    border-radius: 15px;
+    margin: 10px 0;
+    text-align: right;
+    width: fit-content;
+    max-width: 80%;
+    margin-left: auto;
+}
+
+/* Bot bubble */
+.bot-msg {
+    background: #fce4ec;
+    padding: 12px;
+    border-radius: 15px;
+    margin: 10px 0;
+    text-align: left;
+    width: fit-content;
+    max-width: 80%;
+    line-height: 1.6;
+}
+
+/* 🌿 Chat container */
+.chat-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* 💬 Chat window */
+.chat-window {
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 15px;
+    height: 350px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 💬 Message bubbles */
+.message {
+    max-width: 75%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 15px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* 👤 User message */
+.message.user {
+    background: #d81b60;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+}
+
+/* 🤖 Bot message */
+.message.bot {
+    background: #fce4ec;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+/* 📩 Input area */
+.chat-input {
+    display: flex;
+    margin-top: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.chat-input button {
+    margin-left: 8px;
+    padding: 0 18px;
+    border-radius: 50%;
+    background: #d81b60;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.chat-input button:hover {
+    background: #880e4f;
+}
+
+/* 🔙 Back button */
+.back-btn {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.language-select {
+    margin: 10px 0;
+    text-align: right;
+}
+
+.language-select select {
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
