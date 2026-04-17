@@ -109,5 +109,51 @@ def tracker():
         fertile_end=fertile_end.date()
     )
 
+
+## add route for symptom checker
+@app.route('/symptom', methods=['GET'])
+def symptom_page():
+    return render_template('symptom.html')
+
+## processing
+@app.route('/symptom', methods=['POST'])
+def symptom():
+    text = request.form['symptoms'].lower()
+
+    score = 0
+
+    if "irregular" in text:
+        score += 1
+    if "weight" in text:
+        score += 1
+    if "acne" in text:
+        score += 1
+    if "hair" in text:
+        score += 1
+
+    if score >= 3:
+        risk = "High Risk"
+    elif score >= 1:
+        risk = "Moderate Risk"
+    else:
+        risk = "Low Risk"
+
+    return render_template('symptom_result.html', result=risk)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
