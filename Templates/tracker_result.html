@@ -8,15 +8,16 @@
 
 <div class="container">
 
-    <h2>🌸 Your Cycle Insights</h2>
+    <h2>🌸 Your Cycle Prediction</h2>
 
-    <p>📅 Next Period: <b>{{ next_period }}</b></p>
+    <p>📅 Next Period: <b>{{ next_date }}</b></p>
+    <p>📊 Average Cycle Length: <b>{{ avg_cycle }} days</b></p>
     <p>🌼 Ovulation Day: <b>{{ ovulation }}</b></p>
-    <p>💛 Fertile Window: <b>{{ fertile_start }} to {{ fertile_end }}</b></p>
 
+    <a href="/cycle">🔁 Try Again</a>
     <br>
 
-    <a href="/tracker">🔁 Track Again</a><br><br>
+    
     <a href="/menu">🏠 Menu</a>
 
 </div>

@@ -85,29 +85,37 @@ def pcos():
 
 
 ## cycle tracker
-@app.route('/tracker', methods=['GET'])
-def tracker_page():
-    return render_template('tracker.html')
+from datetime import datetime, timedelta
 
-@app.route('/tracker', methods=['POST'])
-def tracker():
-    last_period = request.form['last_period']
-    cycle_length = int(request.form['cycle'])
+@app.route('/cycle', methods=['GET', 'POST'])
+def cycle():
+    if request.method == 'POST':
 
-    last_date = datetime.strptime(last_period, "%Y-%m-%d")
+        d1 = datetime.strptime(request.form['date1'], "%Y-%m-%d")
+        d2 = datetime.strptime(request.form['date2'], "%Y-%m-%d")
+        d3 = datetime.strptime(request.form['date3'], "%Y-%m-%d")
 
-    next_period = last_date + timedelta(days=cycle_length)
-    ovulation = next_period - timedelta(days=14)
-    fertile_start = ovulation - timedelta(days=2)
-    fertile_end = ovulation + timedelta(days=2)
+        # Calculate cycle lengths
+        cycle1 = (d2 - d1).days
+        cycle2 = (d3 - d2).days
 
-    return render_template(
-        'tracker_result.html',
-        next_period=next_period.date(),
-        ovulation=ovulation.date(),
-        fertile_start=fertile_start.date(),
-        fertile_end=fertile_end.date()
-    )
+        avg_cycle = (cycle1 + cycle2) // 2
+
+        # Predict next period
+        next_date = d3 + timedelta(days=avg_cycle)
+
+        # Ovulation (approx)
+        ovulation = next_date - timedelta(days=14)
+
+        return render_template(
+            'cycle_result.html',
+            next_date=next_date.date(),
+            avg_cycle=avg_cycle,
+            ovulation=ovulation.date()
+        )
+
+    return render_template('cycle.html')
+    
 
 ## chatbot route
 import random
